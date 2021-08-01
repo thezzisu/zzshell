@@ -1,7 +1,11 @@
 # zzshell
 Shell theme for zsh and posh
+## Features
+- Inspired by the default OMZ theme
+- Do not require powerline / unicode fonts, works in TTY
+- Exit codes are displayed
 
-### Screenshots
+## Screenshots
 #### oh-my-posh on PowerShell
 ![image](https://user-images.githubusercontent.com/21094314/127772758-9a70369c-2599-4fce-92c6-cf7c410fae2e.png)
 
