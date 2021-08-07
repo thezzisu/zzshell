@@ -18,3 +18,10 @@ Shell theme for zsh and posh
 curl --proto '=https' -sSf https://raw.githubusercontent.com/thezzisu/zzshell/master/zzshell.zsh-theme | tee ~/.oh-my-zsh/custom/themes/zzshell.zsh-theme
 ```
 Then change the theme in `.zshrc`
+
+### oh-my-posh
+```powershell
+Invoke-WebRequest https://raw.githubusercontent.com/thezzisu/zzshell/master/.zzshell.omp.json -UseBasicParsing -OutFile ~/.zzshell.omp.json
+Set-PoshPrompt -Theme ~/.zzshell.omp.json
+```
+To persist the change, add the second line to your `$PROFILE`
