@@ -36,11 +36,20 @@
           "type": "session"
         },
         {
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "template": "{{if .Root}} {{end}}"
+          },
+          "style": "plain",
+          "type": "session"
+        },
+        {
           "foreground": "#62ED8B",
           "properties": {
             "display_exit_code": false,
             "always_enabled": true,
-            "prefix": " >",
+            "prefix": ">",
             "error_color": "#E74856"
           },
           "style": "plain",
