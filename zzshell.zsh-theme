@@ -5,11 +5,13 @@ PROMPT+="@"
 PROMPT+=$(cat /proc/sys/kernel/hostname)
 
 PROMPT+=" "
+PROMPT+="%(?::%{$fg_bold[yellow]%}%? )"
 if [ $(id -u) -eq 0 ]
 then
-  PROMPT+="%{$fg_bold[white]%}%{$bg[red]%}#%{$reset_color%}"
+  PROMPT+="%{$fg_bold[white]%}%{$bg[red]%}#%{$reset_color%} "
 fi
-PROMPT+="%(?:%{$fg_bold[green]%}> :%{$fg[yellow]%}%? %{$fg_bold[red]%}> )"
+PROMPT+="%(?:%{$fg_bold[green]%}>:%{$fg_bold[red]%}>)"
+PROMPT+=" "
 PROMPT+="%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
