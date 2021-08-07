@@ -25,6 +25,17 @@
           "type": "exit"
         },
         {
+          "foreground": "#ffffff",
+          "background": "#E74856",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "template": "{{if .Root}}#{{end}}"
+          },
+          "style": "plain",
+          "type": "session"
+        },
+        {
           "foreground": "#62ED8B",
           "properties": {
             "display_exit_code": false,
