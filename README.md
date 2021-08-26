@@ -16,6 +16,7 @@ Shell theme for zsh and posh
 ### oh-my-zsh
 ```sh
 curl --proto '=https' -sSf https://raw.githubusercontent.com/thezzisu/zzshell/master/zzshell.zsh-theme | tee ~/.oh-my-zsh/custom/themes/zzshell.zsh-theme
+sed -i -E 's/ZSH_THEME=".+"/ZSH_THEME="zzshell"/' .zshrc
 ```
 Then change the theme in `.zshrc`
 
