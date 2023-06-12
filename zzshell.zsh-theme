@@ -1,8 +1,12 @@
-PROMPT="%{$fg_bold[black]%}"
-
+PROMPT=""
+PROMPT+="%{$fg_bold[black]%}"
 PROMPT+=$(id -u -n)
 PROMPT+="@"
 PROMPT+=$(cat /proc/sys/kernel/hostname)
+if [ -f "/proc/sys/fs/binfmt_misc/WSLInterop" ]; then
+  WSL_DISTRO_NAME="$(IFS='\';x=($(wslpath -w /));echo "${x[${#x[@]}-1]}")"
+  PROMPT+="(%{$WSL_DISTRO_NAME%})"
+fi
 
 PROMPT+=" "
 PROMPT+="%(?::%{$fg_bold[yellow]%}%? )"
